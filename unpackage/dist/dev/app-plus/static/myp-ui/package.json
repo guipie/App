@@ -1,0 +1,61 @@
+{
+  "_from": "@mypui/myp-ui@2.6.0",
+  "_id": "@mypui/myp-ui@2.6.0",
+  "_inBundle": false,
+  "_integrity": "sha512-3GGo2Z7bwrKTHkEezXiCXqk+bGVD5w2GGi1Q5p6ZCLvDmo4EgBYSIWh3HLGauaHMbKQpEG/THYYNr8IDeejdkQ==",
+  "_location": "/@mypui/myp-ui",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "version",
+    "registry": true,
+    "raw": "@mypui/myp-ui@2.6.0",
+    "name": "@mypui/myp-ui",
+    "escapedName": "@mypui%2fmyp-ui",
+    "scope": "@mypui",
+    "rawSpec": "2.6.0",
+    "saveSpec": null,
+    "fetchSpec": "2.6.0"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/@mypui/myp-ui/-/myp-ui-2.6.0.tgz",
+  "_shasum": "46664c0825b90195273b896b1d7cd012e28052e7",
+  "_spec": "@mypui/myp-ui@2.6.0",
+  "_where": "D:\\monster\\GuiPieApp",
+  "author": {
+    "name": "https://github.com/wakaryry"
+  },
+  "bugs": {
+    "url": "https://github.com/wakaryry/mypUI/issues"
+  },
+  "bundleDependencies": false,
+  "deprecated": false,
+  "description": "第一个高效且强悍的nvue开源组件库。做最好、最顺手的nvue组件库",
+  "homepage": "https://github.com/wakaryry/mypUI#readme",
+  "keywords": [
+    "uni",
+    "uni-ui",
+    "myp",
+    "mypUI",
+    "myp-ui",
+    "mypui",
+    "nvue",
+    "uniapp",
+    "ui",
+    "vue"
+  ],
+  "license": "ISC",
+  "main": "index.js",
+  "name": "@mypui/myp-ui",
+  "private": false,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wakaryry/mypUI.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "version": "2.6.0"
+}

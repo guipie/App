@@ -1,0 +1,41 @@
+{
+	"easycom": {
+		"^u-(.*)": "uview-ui/components/u-$1/u-$1.vue"
+	},
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages 
+		{
+			"path": "pages/main",
+			"style": {
+				"navigationBarTitleText": "鬼瞥社区，诡也，瞥之....", //设置页面标题文字
+				"enablePullDownRefresh": true, //开启下拉刷新
+				"app-plus": {
+					"titleNView": {
+						"buttons": [{
+							"type": "home"
+						}]
+						// "searchInput": {
+						// 	"backgroundColor": "#fff",
+						// 	"borderRadius": "6px", //输入框圆角
+						// 	"placeholder": "请输入搜索内容",
+						// 	"disabled": false //disable时点击输入框不置焦，可以跳到新页面搜索
+						// }
+					}
+				}
+			}
+		},
+		{
+			"path": "pages/news/index"
+		}, {
+			"path": "pages/movie/index"
+		}
+	],
+	"globalStyle": {
+		"pageOrientation": "portrait",
+		"navigationBarTextStyle": "white",
+		"navigationBarTitleText": "鬼瞥社区，诡也，瞥之",
+		// 设置默认的navbar背景色，根据自己的项目更改(mp端页面渲染的时候会先出现导航栏)
+		"navigationBarBackgroundColor": "#000000"
+		// 取消掉所有的导航栏，使用自定义的导航栏
+		// "navigationStyle": "custom"
+	}
+}

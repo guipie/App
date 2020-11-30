@@ -1,8 +1,8 @@
 <template>
 	<view>
 		<view class="wrap">
-			<u-tabs name="tab_name" bg-color="#000000" inactive-color="#efefef" active-color="#ff0000" count="5" :list="list"
-			 :is-scroll="false" :current="current" @change="tabChange"></u-tabs>
+			<u-tabs ref="tabs" name="tab_name" bg-color="#000000" inactive-color="#efefef" active-color="#ff0000" count="5"
+			 :list="list" :is-scroll="false" :current="current" @change="tabChange"></u-tabs>
 			<news-video v-for="item in 10" :key="item"></news-video>
 		</view>
 	</view>
@@ -22,23 +22,19 @@
 		data() {
 			return {
 				list: [{
-						tab_name: '待付款'
+						name: '关注'
 					},
 					{
-						tab_name: '待发货'
-					},
-					{
-						tab_name: '待收货'
-					},
-					{
-						tab_name: '待评价',
-						count: 12
+						name: '推荐'
 					}
 				],
 				current: 0
 			};
 		},
-		onLoad() {},
+		mounted() {
+			this.$store.dispatch("news/fetchNewsList");
+			this.$store.dispatch("news/fetchBannerNews");
+		},
 		methods: {
 			tabChange() {
 				// 此tab为空数据
@@ -48,34 +44,7 @@
 						this.getOrderList(this.current);
 					}, 1200);
 				}
-			},
-			// 页面数据
-			getOrderList(idx) {
-				for (let i = 0; i < 5; i++) {
-					let index = this.$u.random(0, this.dataList.length - 1);
-					let data = JSON.parse(JSON.stringify(this.dataList[index]));
-					data.id = this.$u.guid();
-					this.orderList[idx].push(data);
-				}
-				this.loadStatus.splice(this.current, 1, "loadmore")
-			},
-			// 总价
-			totalPrice(item) {
-				let price = 0;
-				item.map(val => {
-					price += parseFloat(val.price);
-				});
-				return price.toFixed(2);
-			},
-			// 总件数
-			totalNum(item) {
-				let num = 0;
-				item.map(val => {
-					num += val.number;
-				});
-				return num;
-			},
-			// tab栏切换
+			}, // tab栏切换
 			change(index) {
 				this.swiperCurrent = index;
 				this.getOrderList(index);
@@ -100,12 +69,5 @@
 	};
 </script>
 
-<style>
-	/* #ifndef H5 */
-	page {
-		height: 100%;
-		background-color: #f2f2f2;
-	}
-
-	/* #endif */
+<style lang="scss" scoped>
 </style>

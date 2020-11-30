@@ -19,11 +19,9 @@
 				</u-col>
 				<u-col span="4">
 					<u-image style="height: 150rpx;" :src="thumb" :fade="true" duration="450"></u-image>
-
 				</u-col>
 				<u-col span="4">
 					<u-image style="height: 150rpx;" :src="thumb" :fade="true" duration="450"></u-image>
-
 				</u-col>
 			</u-row>
 		</view>
@@ -46,43 +44,28 @@
 </script>
 
 <style scoped lang="scss">
-	.u-card-wrap {
-		background-color: $u-bg-color;
-		padding: 1px;
-	}
-
 	.u-body-item {
 		font-size: 32rpx;
 		color: #333;
 		padding: 20rpx 10rpx;
 	}
 
-	.u-body-item image {
-		width: 120rpx;
-		flex: 0 0 120rpx;
-		height: 120rpx;
-		border-radius: 8rpx;
-		margin-left: 12rpx;
+	.item {
+		/* #ifndef APP-NVUE */
+		display: flex;
+		/* #endif */
+		margin: 5rpx 0 0;
 	}
 
-	.item {
-		display: flex;
-		margin: 5rpx 0 0;
+	.left {
+		margin-right: 20rpx;
+		width: 60%;
+	}
 
-		.left {
-			margin-right: 20rpx;
-			width: 60%;
-		}
-
-		.left span {
-			padding-left: 10rpx;
-		}
-
-		.right {
-			margin-right: 20rpx;
-			padding-top: 20rpx;
-			width: 40%;
-			text-align: right;
-		}
+	.right {
+		margin-right: 20rpx;
+		padding-top: 20rpx;
+		width: 40%;
+		text-align: right;
 	}
 </style>
